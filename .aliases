@@ -1,0 +1,9 @@
+alias vi="vim"
+alias cdp="cd Documents/src/code/personal/"
+alias l='ls -al --color'
+alias ll='ls --color'
+alias zshconfig='vi ~/.dotfiles/.zshrc'
+alias zshreload='source ~/.dotfiles/.zshrc'
+alias vim-update='vim +PluginUpdate +qall'
+alias rm='rm -i'
+alias update-all="sudo softwareupdate -i -a; mas upgrade; brew update; brew upgrade; brew cleanup; upgrade_oh_my_zsh; vim -E -s -u .vimrc -c 'PluginInstall' -c 'qa!'"

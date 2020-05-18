@@ -1,13 +1,17 @@
-#!/bin/sh -e
+#!/bin/bash -e
 
-dotfiles_check() {
+main() {
   if [ -d "$HOME/.dotfiles" ]; then
-    printf '\033[31mERROR:\033[0m ~/dotfiles already exists on this system.\n' >&2
-    exit 1
+    read -r -p '~/dotfiles already exists on this system. Are you sure you want to continue? [y/n] ' INPUT
+    if [[ ! $INPUT =~ ^[Yy]$ ]]; then
+      exit 1
+    else
+      install
+    fi
   fi
 }
 
-main() {
+install() {
   if ! [ -x "$(command -v git)" ]; then
       curl -L https://github.com/nicolaballotta/dotfiles/archive/master.tar.gz -o "/tmp/dotfiles-master.tar.gz"
       tar xzf "/tmp/dotfiles-master.tar.gz"
@@ -25,5 +29,4 @@ main() {
   fi
 }
 
-dotfiles_check
 main

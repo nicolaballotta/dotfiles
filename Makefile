@@ -31,6 +31,7 @@ help:
 	@echo '   make software_list                       update Brewfile               '
 	@echo '   make software_cleanup                    cleanup unneeded software     '
 	@echo '   make macos                               configure MacOS               '
+	@echo '   make dots                                install dots                  '
 	@echo '   make all                                 install and configure all     '
 
 

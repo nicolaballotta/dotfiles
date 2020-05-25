@@ -7,3 +7,5 @@ alias zshreload='source ~/.dotfiles/.zshrc'
 alias vim-update='vim +PluginUpdate +qall'
 alias rm='rm -i'
 alias update-all="sudo softwareupdate -i -a; mas upgrade; brew update; brew upgrade; brew cleanup; upgrade_oh_my_zsh; vim -E -s -u .vimrc -c 'PluginInstall' -c 'qa!'"
+alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias clean-cache="sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder"

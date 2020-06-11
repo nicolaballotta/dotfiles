@@ -88,6 +88,7 @@ cask "xmind"
 cask "obinslab-starter"
 cask "jabra-direct"
 cask "slack"
+cask "zoomus"
 mas "Affinity Designer", id: 824171161
 mas "Affinity Photo", id: 824183456
 mas "Dashlane", id: 552383089
